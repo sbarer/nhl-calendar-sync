@@ -16,7 +16,7 @@ def normalize_start(event):
         return None
     return datetime.fromisoformat(start.replace("Z", "+00:00")).astimezone(timezone.utc)
 
-def events_equal(existing, new):  
+def events_equal(existing, new):
     return (
         existing.get("summary") == new.get("summary") and
         normalize_start(existing) == normalize_start(new) and

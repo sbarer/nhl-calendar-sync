@@ -34,11 +34,16 @@ def main():
 
         existing_event = existing_calendar_events.get(str(game["game_id"]))
 
+        start_time = datetime.fromisoformat(
+            game["start"].replace("Z", "+00:00")
+        ).astimezone(timezone.utc)
+
+        now = datetime.now(timezone.utc)
         # -----------------------------
         # UPDATE
         # -----------------------------
         if existing_event:
-            if events_equal(existing_event, event):
+            if events_equal(existing_event, event) or start_time < now:
                 skipped += 1
                 continue
 
