@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "nhl-playoff-calendar",
+  "private_key_id": "cecde947b63da7e083de001f2fe403c5e8aa71e4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDOGQUP6qHAJAzP\nt6rjHiXB3je0yucjNKHNv9C5A+y1WWvNVznsqrqdLgNYqODXyGeX8VdJTn/oEvSb\nY2nd9HU2W24MtsSPES7Pa7YqHo0nbTxFPQjnd87CZMpGNlB5M/USDC7Gi/t7Wt3U\nQCHCPSpPqKCvr30t5uyl0TyYfKaQeuu0ZPEECXe8C7EE1ZOqUU+lAtMkdMM+ylTL\nLhTasnA+eMLrE0eHFynLx1e8kZzWjl0W9eht19xc2+JtgeREva2N+qEzVlwN99Nt\nY+CMxGjapE7IGnC//dd9zqgLxrW+nmkwSVwesveqspOzAJDHbTL6erx1rGPtJQtJ\nNWv4pxsLAgMBAAECggEAFcNlmfMsZnZIFg0ukfImiYzWNBSzCLAvn+Lv/wGPluzc\n6d+aoce7kgqAVvXqXE7wxYY6MecEsbSCuP/r94CvefB4tAX+xp7JYyTcJSF5xV6P\nHT6fOJYZssRi6bwljk7yw5eevt+cTD/hqd6l0fWUiLnlUfgFj3nRpobsT6vmCN6J\njoe7xH0Ry5T4wmssD1kFjLf6xMOMDNMSZ2dzRajoOV5SpI6y/wHigUfAF5FS8nCD\n46bORKl5pglbvlh5Hz08pWzmA9oeqsS5vygpyHnotS3B0uZizEx8O04CNxUY2H/9\n1S/mcLEvgdE+OeCM7KII4MYD/neSmT6xhUfOWlNipQKBgQDoaXty4lYDJkEix9+Z\nFLH1WitZXk+bNOH19Edz0G+CSnUnLUxspl7m2Rh5fEg9t88MDYqMVMXB2m5JoPS4\nRTV5MglzE9LOWBcNZIwGSyzvEKCp0SMsXhXo8ccWoT1u3hvh+zXpYs5iVR/Svabi\nbryN0M0a16A+ZyEt6Q5pC2nllwKBgQDjA9cwemmqT0tBTL2DFSEatqcJJOyfJ/7t\nRrtS7akMiPV1bCkodb6fpIdr4UbkgHr7IuF+x1juTdzk4hKQiIkT/Ex++jPycUy2\n31LQjyyjKTHdgB9uv9qh2lAzQDTT7BNkq0rWm5N9kS0Gf4DmQJwrgTRFSYA0gwbG\n+mneZIcsrQKBgDmAt7mCBJP86ArJ9ymx9CHncGhJLFsTZ4DqMq+V97D96SSLUahk\nNYDaX/LW7CzRCJpL02bLJq7C85ymBUZ+YS+eULY3RmYlZ3a51OdNvE1eCNJbW1+D\n29np0D9qH4AJ1k5AUGNxPe0YcKo8oEjP6zkPW1/zz8MA0zW/vwAAge/7AoGAV6lV\nAFBU20IxYi7bA3I2TVV43OwYP0E3jLKChXxmigOdHVG99vS4vnbPIFZmhLgkRTPr\n9YPPEH6arPurhYpjvIbxlxrQ0m7z264TEZwn9X1j1w+xk5ecOmHOFGxXufnwZzBJ\n/uMmqhdUVq0HvmH2rEoBQDwouJ5cEJwEI6+YDyUCgYBD2KNPhPWpgIMmbBwO6gTu\not6LmWt1K7L8EuZGpsPCGl4bCdMpN4FeEV5qq9t5Ea/47z1M0GPivdapziLuCsQF\nPsJxWGKvjM9YevOOEpPMUwS08rUtAnt7Ig02G/W+17acLJEE7XVBBym9BwLbrsVA\nmn/gb/WgUzdQE5fml1Ctuw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "nhl-calendar-sync@nhl-playoff-calendar.iam.gserviceaccount.com",
+  "client_id": "117394429681465711030",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nhl-calendar-sync%40nhl-playoff-calendar.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
