@@ -37,55 +37,27 @@ def delete_events(service, dels):
         except Exception:
             pass
 
-def date_out_of_bounds(e):
-    startDate = datetime.fromisoformat(e["start"]["dateTime"].replace("Z", "+00:00")).date()
-    if not startDate:
-        return True
-    try:
-        upper = TODAY + timedelta(days=7)
-
-        return startDate < TODAY or startDate > upper
-
-    except Exception:
-        return True
 
 
 def get_existing_calendar_events(service):
-
-    events = {}
-    deletions = []
-
+    events = []
     page_token = None
 
     while True:
-
         response = service.events().list(
             calendarId=CALENDAR_ID,
             pageToken=page_token
         ).execute()
 
-        for e in response.get("items", []):
-
-            game_id = e.get("extendedProperties", {}).get("private", {}).get("game_id", "")
-
-            if (
-                game_id == "" or
-                game_id in events or
-                date_out_of_bounds(e)
-            ):
-                deletions.append(e)
-            else:
-                events[game_id] = e    
+        events.extend(response.get("items", []))
 
         page_token = response.get("nextPageToken")
-
         if not page_token:
             break
 
-    # print(f"events = {len(events)}\ndeletions = {len(deletions)}")
-    delete_events(service, deletions)
-    
-    # first_event = next(iter(events.values()), None)
-    # print(f"existing_events ({len(events)}): {first_event}")
-    # print(events.keys())
-    return events
+    print(f"🗑 Deleting {len(events)} existing events")
+
+    delete_events(service, events)
+
+    # Return empty dict so everything gets recreated
+    return {}
