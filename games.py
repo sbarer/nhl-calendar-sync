@@ -45,7 +45,7 @@ def get_games_from_nhl():
 
         for day in data.get("gameWeek", []):
             for g in day.get("games", []):
-                if g["gameState"] is "OFF" or g["gameScheduleState"] is "TBD":
+                if g["gameState"] == "OFF" or g["gameScheduleState"] == "TBD":
                     continue
 
                 start = datetime.fromisoformat(g["startTimeUTC"].replace("Z", "+00:00"))
