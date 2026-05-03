@@ -45,18 +45,10 @@ def get_games_from_nhl():
 
         for day in data.get("gameWeek", []):
             for g in day.get("games", []):
-                if "startTimeUTC" not in g:
-                    print("🚨 Missing startTimeUTC:", g)
+                if g["gameState"] is "OFF" or g["gameScheduleState"] is "TBD":
+                    continue
 
                 start = datetime.fromisoformat(g["startTimeUTC"].replace("Z", "+00:00"))
-                cutoff = datetime.combine(
-                    TODAY + timedelta(days=LOOKAHEAD_DAYS),
-                    datetime.min.time(),
-                    tzinfo=timezone.utc
-                )
-
-                if start > cutoff:
-                    continue
 
                 gameDict[str(g.get("id"))] = g
 
