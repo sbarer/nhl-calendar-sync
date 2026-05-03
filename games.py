@@ -41,13 +41,13 @@ def get_games_from_nhl():
         date = (TODAY + timedelta(days=i)).isoformat()
         data = get_schedule(date)
 
-        print("games")
-        print(i, data)
+        # print(i, data)
 
         for day in data.get("gameWeek", []):
             for g in day.get("games", []):
-                print("game")
-                print(g)
+                if "startTimeUTC" not in g:
+                    print("🚨 Missing startTimeUTC:", g)
+
                 start = datetime.fromisoformat(g["startTimeUTC"].replace("Z", "+00:00"))
                 cutoff = datetime.combine(
                     TODAY + timedelta(days=LOOKAHEAD_DAYS),
